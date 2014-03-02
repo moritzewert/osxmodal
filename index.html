@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="assets/css/bootstrap.css" title="Bootstrap" type="text/css" media="screen" charset="utf-8">
+		<link rel="stylesheet" href="assets/css/osxmodal.css" title="Bootstrap" type="text/css" media="screen" charset="utf-8">
+		<title>OSX Modal</title>
+	</head>
+	<body>
+		<h1>OSX Modal</h1>
+
+		<button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#osxmodal">Basic modal</button>
+		<button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#osxmodaltoolbar">Modal with toolbar</button>
+		<button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#osxmodaltexteditor">Texteditor</button>
+		
+		<!-------------------------------------------------------------------->
+		
+		<div class="modal osxmodal fade" id="osxmodal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&bullet;</button>
+						<h4 class="modal-title" id="myModalLabel">Basic modal</h4>
+					</div>
+					<div class="modal-body">
+						...
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+						<button type="button" class="btn btn-primary">Save changes</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<!-------------------------------------------------------------------->
+		
+		<div class="modal osxmodal fade" id="osxmodaltoolbar" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&bullet;</button>
+						<h4 class="modal-title" id="myModalLabel">Modal with Toolbar</h4>
+						<ul class="toolbar">
+							<li><a href="#"><i class="glyphicon glyphicon-floppy-disk"></i></a></li>
+							
+							<li><a href="#"><i class="glyphicon glyphicon-bold"></i></a></li>
+							
+							<li><a href="#"><i class="glyphicon glyphicon-align-left"></i></a></li>
+							<li><a href="#"><i class="glyphicon glyphicon-align-center"></i></a></li>
+							<li><a href="#"><i class="glyphicon glyphicon-align-right"></i></a></li>
+						</ul>
+					</div>
+					<div class="modal-body">
+						...
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+						<button type="button" class="btn btn-primary">Save changes</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<!-------------------------------------------------------------------->
+		
+		<div class="modal osxmodal fade" id="osxmodaltexteditor" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&bullet;</button>
+						<h4 class="modal-title" id="myModalLabel">Texteditor</h4>
+						<ul class="toolbar">
+							<li><a href="#"><i class="glyphicon glyphicon-floppy-disk"></i></a></li>
+							
+							<li class="active"><a href="#"><i class="glyphicon glyphicon-bold"></i></a></li>
+							
+							<li><a href="#"><i class="glyphicon glyphicon-align-left"></i></a></li>
+							<li><a href="#"><i class="glyphicon glyphicon-align-center"></i></a></li>
+							<li><a href="#"><i class="glyphicon glyphicon-align-right"></i></a></li>
+						</ul>
+					</div>
+					<div class="modal-body">
+						<textarea rows="30"></textarea>
+					</div>
+					<div class="modal-footer">
+						<p class="text-center"><a class="word-count">200</a> Wörter</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+    	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+		<script src="assets/js/bootstrap.js" charset="utf-8"></script>
+		<script>
+			$(document).ready(function()
+			{
+				$('#osxmodaltexteditor').modal('show');
+			});
+		</script>
+	</body>
+</html>
